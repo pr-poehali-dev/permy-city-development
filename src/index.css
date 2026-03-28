@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    --background: 220 20% 6%;
-    --foreground: 40 15% 90%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
-    --card: 220 18% 9%;
-    --card-foreground: 40 15% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 220 18% 9%;
-    --popover-foreground: 40 15% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 43 85% 55%;
-    --primary-foreground: 220 20% 6%;
+    --primary: 0 80% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 40 15% 85%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 43 85% 55%;
-    --accent-foreground: 220 20% 6%;
+    --accent: 0 80% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 40 15% 90%;
+    --destructive: 0 80% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 16%;
-    --input: 220 15% 16%;
-    --ring: 43 85% 55%;
+    --border: 0 0% 86%;
+    --input: 0 0% 86%;
+    --ring: 0 80% 45%;
 
     --radius: 0px;
 
-    --gold: 43 85% 55%;
-    --steel: 220 15% 35%;
-    --dark-bg: 220 20% 6%;
-    --panel: 220 18% 9%;
+    --gold: 0 80% 45%;
+    --steel: 0 0% 55%;
+    --dark-bg: 0 0% 98%;
+    --panel: 0 0% 100%;
   }
 }
 
@@ -83,8 +83,8 @@
 
   .grid-lines {
     background-image:
-      linear-gradient(rgba(200, 160, 60, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(200, 160, 60, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(180, 30, 30, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180, 30, 30, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -168,9 +168,9 @@
     background: linear-gradient(
       90deg,
       hsl(var(--gold)) 0%,
-      hsl(43 70% 70%) 100%
+      hsl(0 60% 65%) 100%
     );
-    box-shadow: 0 0 12px rgba(200, 160, 60, 0.4);
+    box-shadow: 0 0 12px rgba(180, 30, 30, 0.35);
   }
 
   .card-hover {
