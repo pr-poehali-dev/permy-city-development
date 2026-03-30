@@ -219,7 +219,7 @@ export default function Index() {
             </h1>
             <p className="font-ibm text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10">
               Масштабный градостроительный проект нового жилого квартала
-              в сердце Перми — 42 гектара современной архитектуры
+              в сердце Перми — 2,6 гектара современной архитектуры
               и городской инфраструктуры.
             </p>
           </div>
