@@ -257,6 +257,24 @@ export default function Index() {
                 новый визуальный ориентир для всего района ДКЖ.
               </p>
             </div>
+
+            <div className="mt-10 border border-border p-6 bg-card">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 border border-gold/30 flex items-center justify-center">
+                  <Icon name="Building2" size={16} className="text-gold" />
+                </div>
+                <span className="font-oswald text-sm tracking-widest text-gold uppercase">Рядом строится</span>
+              </div>
+              <h3 className="font-oswald text-2xl font-medium text-foreground mb-3">
+                ВЫСОТНЫЙ ЖИЛОЙ КОМПЛЕКС
+              </h3>
+              <p className="font-ibm text-sm text-muted-foreground leading-relaxed">
+                Параллельно со строительством Пермь-Сити на соседнем участке ведётся возведение
+                высотного жилого комплекса. Два объекта формируют единый современный
+                архитектурный ансамбль микрорайона ДКЖ, создавая новую точку притяжения
+                в этой части города.
+              </p>
+            </div>
           </div>
 
           <div className="space-y-px">
