@@ -247,7 +247,16 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 max-w-7xl mx-auto px-6">
+      <section id="about" className="py-24 relative">
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="https://cdn.poehali.dev/projects/92bc8372-686f-4df8-beaa-5a8de6eb286a/bucket/390135a1-ef82-427a-805b-0a9b1fa3f12d.png"
+            alt="Пермь-Сити рендер"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/85" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="animate-slide-up">
             <div className="flex items-center gap-3 mb-6">
@@ -317,6 +326,7 @@ export default function Index() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </section>
 
