@@ -3,6 +3,24 @@ import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/92bc8372-686f-4df8-beaa-5a8de6eb286a/bucket/d51c5dea-dcf5-46cc-bb91-a42d683559cb.png";
 
+const RENDER_IMAGES = [
+  {
+    url: "https://cdn.poehali.dev/projects/92bc8372-686f-4df8-beaa-5a8de6eb286a/bucket/2509ebc0-1378-462b-adcd-c5d45d752036.png",
+    label: "Вид с высоты птичьего полёта",
+    tag: "РЕНДЕР",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/92bc8372-686f-4df8-beaa-5a8de6eb286a/bucket/452611fe-8781-4fc0-bc5a-4ccc0807a570.png",
+    label: "Панорама квартала",
+    tag: "РЕНДЕР",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/92bc8372-686f-4df8-beaa-5a8de6eb286a/bucket/c1a8ac7d-f2c8-4b62-bf9a-4ad0a8ddc37b.png",
+    label: "Башня — крупный план",
+    tag: "3D",
+  },
+];
+
 const NAV_ITEMS = [
   { id: "about", label: "О ПРОЕКТЕ" },
   { id: "stages", label: "ЭТАПЫ" },
@@ -437,37 +455,38 @@ export default function Index() {
             <span className="text-gold">ВИЗУАЛИЗАЦИИ</span>
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
             <div
-              className="md:col-span-2 relative overflow-hidden bg-muted cursor-pointer group"
-              style={{ aspectRatio: "16/9" }}
+              className="md:row-span-2 relative overflow-hidden bg-muted cursor-pointer group"
+              style={{ aspectRatio: "4/3" }}
             >
               <img
-                src={HERO_IMAGE}
-                alt="Визуализация Пермь-Сити"
+                src={RENDER_IMAGES[0].url}
+                alt={RENDER_IMAGES[0].label}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="font-ibm text-xs text-gold tracking-widest uppercase">РЕНДЕР</span>
-                <p className="font-oswald text-lg text-foreground mt-1">Панорамная визуализация квартала</p>
+                <span className="font-ibm text-xs text-gold tracking-widest uppercase">{RENDER_IMAGES[0].tag}</span>
+                <p className="font-oswald text-lg text-foreground mt-1">{RENDER_IMAGES[0].label}</p>
               </div>
             </div>
 
-            {GALLERY.map((item, i) => (
+            {RENDER_IMAGES.slice(1).map((item, i) => (
               <div
                 key={i}
-                className="relative bg-background cursor-pointer group overflow-hidden"
-                style={{ aspectRatio: "4/3" }}
+                className="relative overflow-hidden bg-muted cursor-pointer group"
+                style={{ aspectRatio: "16/9" }}
               >
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 border border-border group-hover:border-gold/40 transition-colors">
-                  <div className="w-14 h-14 border border-gold/20 group-hover:border-gold/50 flex items-center justify-center transition-colors geo-clip-sm">
-                    <Icon name={item.icon} size={22} className="text-gold/40 group-hover:text-gold transition-colors" fallback="Image" />
-                  </div>
-                  <div className="text-center px-4">
-                    <div className="font-ibm text-[10px] text-gold/60 tracking-widest mb-1">{item.tag}</div>
-                    <div className="font-ibm text-xs text-muted-foreground">{item.label}</div>
-                  </div>
+                <img
+                  src={item.url}
+                  alt={item.label}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <span className="font-ibm text-xs text-gold tracking-widest uppercase">{item.tag}</span>
+                  <p className="font-oswald text-lg text-foreground mt-1">{item.label}</p>
                 </div>
               </div>
             ))}
